@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script Backup dengan Error Handling dan Logging
-# Usage: ./backup_script.sh [IP_SERVER] [DIRECTORY]
+# Usage: ./SecSync.sh [IP_SERVER] [DIRECTORY]
 
 set -euo pipefail  # Exit on error, undefined vars, pipe failures
 
@@ -170,5 +170,4 @@ echo -ne '\n'
 log "[ PROSES BACKUP SELESAI ]"
 log "File backup berhasil disimpan di node2: /backup/$encrypted_filename"
 
-# Opsional: Kirim notifikasi email
-# echo "Backup completed successfully for $server:$sourcedir" | mail -s "Backup Success" admin@domain.com
+echo "Backup completed successfully for $server:$sourcedir" | mail -s "Backup Success" admin@domain.com
