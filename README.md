@@ -167,22 +167,6 @@ $ ./SecSync.sh 192.168.1.50 /home/data
 ![OUTPUT](./image/backup-result.png)
 ![OUTPUT2](./image/backup-result2.png)
 
-## 📁 Directory Structure
-
-```
-SecSync/
-├── SecSync.sh           # Main backup script
-├── install.sh            # Installation script
-├── README.md            # This file
-├── LICENSE              # MIT License
-├── examples/
-│   ├── cron-example.sh  # Cron job examples
-│   └── config-example.sh # Configuration examples
-└── docs/
-    ├── INSTALLATION.md  # Detailed installation guide
-    ├── CONFIGURATION.md # Configuration options
-    └── TROUBLESHOOTING.md # Common issues and solutions
-```
 
 ## 🕒 Automation with Cron
 
