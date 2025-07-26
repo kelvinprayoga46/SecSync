@@ -164,8 +164,8 @@ $ ./SecSync.sh 192.168.1.50 /home/data
 [2024-07-26 10:38:16] [ PROSES BACKUP SELESAI ]
 [2024-07-26 10:38:16] File backup berhasil disimpan di node2: /backup/backup_192.168.1.50_240726103015.tar.gz.asc
 ```
-![OUTPUT](./image/backup-result.PNG)
-![OUTPUT2](./image/backup-result2.PNG)
+![OUTPUT](./image/backup-result.png)
+![OUTPUT2](./image/backup-result2.png)
 
 ## 📁 Directory Structure
 
