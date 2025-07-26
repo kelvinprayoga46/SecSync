@@ -3,11 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bash](https://img.shields.io/badge/Language-Bash-green.svg)](https://www.gnu.org/software/bash/)
 [![Platform](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://www.linux.org/)
-[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/yourusername/backsync/releases)
+[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/yourusername/SecSync/releases)
 
 **Secure, encrypted, and automated backup solution for Linux servers with multi-node synchronization.**
 
-BackSync is a robust bash script that performs automated backups with GPG encryption, rsync synchronization, and comprehensive logging. Perfect for system administrators who need reliable, secure backup solutions.
+SecSync is a robust bash script that performs automated backups with GPG encryption, rsync synchronization, and comprehensive logging. Perfect for system administrators who need reliable, secure backup solutions.
 
 ## ✨ Features
 
@@ -24,22 +24,22 @@ BackSync is a robust bash script that performs automated backups with GPG encryp
 
 ### One-line Installation
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/backsync/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/kelvinprayoga46/SecSync/main/install.sh | bash
 ```
 
 ### Manual Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/backsync.git
-cd backsync
+git clone https://github.com/kelvinprayoga46/SecSync.git
+cd SecSync
 
 # Run installer
 chmod +x install.sh
 ./install.sh
 
 # Configure and run
-nano backsync.sh  # Edit configuration
-./backsync.sh 192.168.1.50 /home/data
+nano SecSync.sh  # Edit configuration
+./SecSync.sh 192.168.1.50 /home/data
 ```
 
 ## 📋 Requirements
@@ -62,7 +62,7 @@ nano backsync.sh  # Edit configuration
 ### 1. Setup SSH Keys
 ```bash
 # Generate SSH key
-ssh-keygen -t rsa -b 4096 -C "backsync-automation"
+ssh-keygen -t rsa -b 4096 -C "SecSync-automation"
 
 # Copy to target servers
 ssh-copy-id root@target-server
@@ -80,7 +80,7 @@ gpg --import private-key.asc
 ```
 
 ### 3. Configure Script
-Edit the configuration section in `backsync.sh`:
+Edit the configuration section in `SecSync.sh`:
 ```bash
 GPG_RECIPIENT="admin@yourdomain.com"    # Your GPG email
 NODE2_SERVER="192.168.1.100"           # Backup node IP
@@ -92,23 +92,23 @@ BACKUP_DIR="/backup"                    # Local backup directory
 ### Basic Usage
 ```bash
 # Backup remote directory
-./backsync.sh <server-ip> <source-directory>
+./SecSync.sh <server-ip> <source-directory>
 
 # Example
-./backsync.sh 192.168.1.50 /home/data
-./backsync.sh web-server.local /var/www
+./SecSync.sh 192.168.1.50 /home/data
+./SecSync.sh web-server.local /var/www
 ```
 
 ### Advanced Examples
 ```bash
 # Backup database server
-./backsync.sh 10.0.1.100 /var/lib/mysql
+./SecSync.sh 10.0.1.100 /var/lib/mysql
 
 # Backup web application
-./backsync.sh web01.company.com /opt/applications
+./SecSync.sh web01.company.com /opt/applications
 
 # Backup user home directories
-./backsync.sh fileserver.local /home
+./SecSync.sh fileserver.local /home
 ```
 
 ## 📊 Process Flow
@@ -137,7 +137,7 @@ graph TD
 ## 📈 Sample Output
 
 ```bash
-$ ./backsync.sh 192.168.1.50 /home/data
+$ ./SecSync.sh 192.168.1.50 /home/data
 
 [2024-07-26 10:30:15] [ PROSES BACKUP FILE DIMULAI ]
 [2024-07-26 10:30:15] Server: 192.168.1.50
@@ -168,8 +168,8 @@ $ ./backsync.sh 192.168.1.50 /home/data
 ## 📁 Directory Structure
 
 ```
-backsync/
-├── backsync.sh           # Main backup script
+SecSync/
+├── SecSync.sh           # Main backup script
 ├── install.sh            # Installation script
 ├── README.md            # This file
 ├── LICENSE              # MIT License
@@ -188,20 +188,20 @@ Add to crontab for automated backups:
 
 ```bash
 # Daily backup at 2 AM
-0 2 * * * /usr/local/bin/backsync 192.168.1.50 /home/data >> /var/log/backsync-cron.log 2>&1
+0 2 * * * /usr/local/bin/SecSync 192.168.1.50 /home/data >> /var/log/SecSync-cron.log 2>&1
 
 # Weekly full backup on Sunday at 3 AM
-0 3 * * 0 /usr/local/bin/backsync web-server /var/www >> /var/log/backsync-weekly.log 2>&1
+0 3 * * 0 /usr/local/bin/SecSync web-server /var/www >> /var/log/SecSync-weekly.log 2>&1
 
 # Monthly database backup on 1st day at 4 AM
-0 4 1 * * /usr/local/bin/backsync db-server /var/lib/mysql >> /var/log/backsync-monthly.log 2>&1
+0 4 1 * * /usr/local/bin/SecSync db-server /var/lib/mysql >> /var/log/SecSync-monthly.log 2>&1
 ```
 
 ## 📊 Monitoring & Logs
 
 ### Log Files
 - **Main log**: `/var/log/backup_YYYYMMDD.log`
-- **Cron log**: `/var/log/backsync-cron.log`
+- **Cron log**: `/var/log/SecSync-cron.log`
 
 ### Real-time Monitoring
 ```bash
@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [OpenSSH](https://www.openssh.com/) - For secure remote connections
 
 ## 📞 Support
-- 🐛 **Bug Reports**: [Issues](https://github.com/yourusername/backsync/issues)
+- 🐛 **Bug Reports**: [Issues](https://github.com/yourusername/SecSync/issues)
 - 💬 **Discussions**: [Telegram](https://t.me/itshelix)
 - 📧 **Email**: kelvinprayoga46@gmail.com
 
@@ -238,6 +238,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by [M.Kelvin Prayoga](https://github.com/kelvinprayoga46)**
 
-[⬆ Back to Top](#-backsync)
+[⬆ Back to Top](#-SecSync)
 
 </div>
