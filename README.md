@@ -215,27 +215,8 @@ ls -la /var/log/backup_*.log
 ssh root@backup-node "df -h /backup"
 ```
 
-## 🔧 Troubleshooting
+OUBLESHOOTING.md).
 
-| Issue | Solution |
-|-------|----------|
-| `rsync: command not found` | Install rsync: `apt install rsync` |
-| `gpg: command not found` | Install gnupg: `apt install gnupg` |
-| `Permission denied (publickey)` | Setup SSH keys: `ssh-copy-id user@server` |
-| `GPG key not found` | Generate or import GPG key |
-| `No space left on device` | Check disk space in `/tmp` and `/backup` |
-
-For detailed troubleshooting, see [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
@@ -248,21 +229,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [OpenSSH](https://www.openssh.com/) - For secure remote connections
 
 ## 📞 Support
-
-- 📚 **Documentation**: [Wiki](https://github.com/yourusername/backsync/wiki)
 - 🐛 **Bug Reports**: [Issues](https://github.com/yourusername/backsync/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/backsync/discussions)
-- 📧 **Email**: support@yourdomain.com
+- 💬 **Discussions**: [Telegram](https://t.me/itshelix)
+- 📧 **Email**: kelvinprayoga46@gmail.com
 
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/backsync&type=Date)](https://star-history.com/#yourusername/backsync&Date)
-
----
 
 <div align="center">
 
-**Made with ❤️ by [YourName](https://github.com/yourusername)**
+**Made with ❤️ by [M.Kelvin Prayoga](https://github.com/kelvinprayoga46)**
 
 [⬆ Back to Top](#-backsync)
 
